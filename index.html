@@ -22,16 +22,11 @@
                     <h3>Hello Telegram</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quisquam! Ratione totam
-                        eum modi unde accusamus fugiat itaque officia impedit animi eaque possimus qui aperiam neque
-                        pariatur quam at eos odio placeat, natus, inventore nostrum quia! Omnis laudantium libero,
-                        dolorum voluptate ipsam sapiente iusto eum quasi doloremque saepe aliquam quaerat. Nostrum eius
-                        voluptatum quasi obcaecati minus ut, facilis, blanditiis tenetur veniam eveniet pariatur
-                        molestias numquam? Fuga explicabo soluta eligendi ut magnam, vitae perferendis nam quod magni.
-                        Cumque explicabo praesentium ipsum veritatis eum doloribus sint expedita voluptatem quis
-                        adipisci, mollitia fugiat in rem. Adipisci cumque unde cupiditate praesentium reprehenderit
-                        quos. Magni!
-                    </p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit </p>
+
+                    <div class="mt-2 mb-2" id="test_btn">
+
+                    </div>
 
                     <button class="btn btn-sm btn-primary" id="btn_main">Test Main Button</button>
                     <button class="btn btn-sm btn-warning" id="btn_back">Test Back Button</button>
@@ -44,6 +39,7 @@
 
 <script>
     $(document).ready(function(){
+
         const Tele_web = window.Telegram.WebApp;
         console.log(Tele_web)
 
@@ -53,8 +49,11 @@
         });
 
         $('#btn_back').on('click',function(){
-            Tele_web.BackButton.text = "Back Button Click";
             Tele_web.BackButton.show();
+        });
+
+        Tele_web.MainButton.onClick(function(){
+            $('#test_btn').html="Main btn click"
         });
 
     })
