@@ -52,10 +52,18 @@
             Tele_web.BackButton.show();
         });
 
-        Tele_web.MainButton.onClick(function(){
+
+
+        Telegram.WebApp.onEvent('mainButtonClicked', function(){
             $('#test_btn').html="Main btn click"
             consol.log("test")
-        });
+        })
+
+
+        // Tele_web.MainButton.onClick(function(){
+        //     $('#test_btn').html="Main btn click"
+        //     consol.log("test")
+        // });
 
     })
 </script>
