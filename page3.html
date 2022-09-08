@@ -46,6 +46,11 @@
 </body>
 
 <script>
+
+    alert(document.referrer)
+
+
+
     $(document).ready(function () {
 
         const Tele_web = window.Telegram.WebApp;
@@ -66,12 +71,11 @@
             alert("main button clicked");
         });
 
-        Tele_web.BackButton.onClick(()=>{
+        Tele_web.BackButton.onClick(() => {
             history.back();
 
         })
 
-        alert(Document.referrer)
 
 
         // $('#test_btn').html(JSON.stringify(Tele_web))
