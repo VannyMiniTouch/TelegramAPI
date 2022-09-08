@@ -14,16 +14,32 @@ $(document).ready(function () {
     // });
 
     let re_url = uri.split('/');
+    let showBack = true;
 
+    $.each(re_url, function (k,v) {
 
-    if ('index.html' in re_url) {
-        alert("true pathname => " + window.location.pathname);
-        Tele_web.BackButton.hide();
-    } else {
-        alert("else ")
+        if (v == 'index.html') {
+            alert("true pathname => " + window.location.pathname);
+            showBack = false;
+            Tele_web.BackButton.hide();
+            return false;
+        }
+    })
+
+    alert("1")
+    if(showBack){
+        alert('ture')
         Tele_web.BackButton.show();
-
     }
+
+    // if ('index.html' in re_url) {
+    //     alert("true pathname => " + window.location.pathname);
+    //     Tele_web.BackButton.hide();
+    // } else {
+    //     alert("else ")
+    //     Tele_web.BackButton.show();
+
+    // }
 
     // if (!window.location.pathname) {
     //     Tele_web.BackButton.show();
