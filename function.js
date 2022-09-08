@@ -19,7 +19,7 @@ $(document).ready(function () {
 
 
     if (window.location.pathname) {
-        alert("pathname " + window.location.pathname);
+        alert("pathname => " + window.location.pathname);
         Tele_web.BackButton.show();
     } else {
         Tele_web.BackButton.hide();
