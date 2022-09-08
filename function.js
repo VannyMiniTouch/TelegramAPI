@@ -17,9 +17,13 @@ $(document).ready(function () {
         Tele_web.BackButton.show();
     });
 
-    if (!window.location.pathname) {
-        Tele_web.BackButton.show();
+    if(window.location.pathname){
+        alert(window.location.pathname);
     }
+
+    // if (!window.location.pathname) {
+    //     Tele_web.BackButton.show();
+    // }
 
 
 
