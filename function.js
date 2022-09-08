@@ -17,10 +17,12 @@ $(document).ready(function () {
 
 
     if ('index.html' in re_url) {
-        alert("pathname => " + window.location.pathname);
+        alert("true pathname => " + window.location.pathname);
         Tele_web.BackButton.hide();
     } else {
+        alert("else ")
         Tele_web.BackButton.show();
+
     }
 
     // if (!window.location.pathname) {
