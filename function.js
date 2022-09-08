@@ -16,11 +16,11 @@ $(document).ready(function () {
     let re_url = uri.split('/');
 
 
-    if (re_url[1] != 'index.html') {
+    if ('index.html' in re_url) {
         alert("pathname => " + window.location.pathname);
-        Tele_web.BackButton.show();
-    } else {
         Tele_web.BackButton.hide();
+    } else {
+        Tele_web.BackButton.show();
     }
 
     // if (!window.location.pathname) {
