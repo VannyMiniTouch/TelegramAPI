@@ -17,6 +17,8 @@ $(document).ready(function () {
         Tele_web.BackButton.show();
     });
 
+    alert("test => "+ window.location.pathname)
+
     if(window.location.pathname){
         alert(window.location.pathname);
     }
@@ -38,9 +40,9 @@ $(document).ready(function () {
 
 
 
-    if (!window.location.pathname) {
-        Tele_web.BackButton.show();
-    }
+    // if (!window.location.pathname) {
+    //     Tele_web.BackButton.show();
+    // }
 
 
 
