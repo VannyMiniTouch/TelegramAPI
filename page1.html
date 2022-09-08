@@ -19,10 +19,10 @@
         <div class="row justify-content-center">
             <div class="cart">
                 <div class="card-header">
-                    <h3>Hello Telegram</h3>
+                    <h3>Hello Page 1</h3>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit </p>
+                    <p>This is Testing Page 1</p>
 
                     <div class="mt-2 mb-2" id="test_btn">
 
@@ -55,11 +55,12 @@
 
         window.Telegram?.WebApp.MainButton.onClick(() => {
             //   window.Telegram.WebApp.sendData(selectedRegions);
-            history.back();
+            alert("main button clicked");
         });
 
         Tele_web.BackButton.onClick(()=>{
-            alert('Back button clicked')
+            history.back();
+
         })
 
         // $('#test_btn').html(JSON.stringify(Tele_web))
