@@ -52,7 +52,13 @@
             Tele_web.BackButton.show();
         });
 
-        $('#test_btn').html(JSON.stringify(Tele_web))
+
+        window.Telegram?.WebApp.MainButton.onClick(() => {
+            //   window.Telegram.WebApp.sendData(selectedRegions);
+            alert("main button clicked");
+        });
+
+        // $('#test_btn').html(JSON.stringify(Tele_web))
 
         // mainButton is the VIEW ORDER button in the image.
         // const mainButton = window.Telegram.WebApp.MainButton;
@@ -64,10 +70,10 @@
 
 
 
-        Telegram.WebApp.onEvent('mainButtonClicked', function(){
-            $('#test_btn').html="Main btn click"
-            consol.log("test")
-        })
+        // Telegram.WebApp.onEvent('mainButtonClicked', function(){
+        //     $('#test_btn').html="Main btn click"
+        //     consol.log("test")
+        // })
 
 
         // Tele_web.MainButton.onClick(function(){
