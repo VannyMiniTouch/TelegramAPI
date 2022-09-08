@@ -36,6 +36,13 @@
 
                     </div>
 
+                    <p id="demo"></p>
+
+                    <script>
+                    document.getElementById("demo").innerHTML = document.referrer;
+                    </script>
+
+
                     <button class="btn btn-sm btn-primary" id="btn_main">Test Main Button</button>
                     <button class="btn btn-sm btn-warning" id="btn_back">Test Back Button</button>
                 </div>
@@ -46,9 +53,6 @@
 </body>
 
 <script>
-
-    alert(document.referrer)
-
 
 
     $(document).ready(function () {

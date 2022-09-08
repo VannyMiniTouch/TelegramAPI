@@ -31,6 +31,11 @@
 
                     <h1>This is Test Page 2</h1>
 
+                    <p id="demo"></p>
+
+                    <script>
+                    document.getElementById("demo").innerHTML = document.referrer;
+                    </script>
 
                     <div class="mt-2 mb-2" id="test_btn">
 
@@ -71,7 +76,7 @@
 
         })
 
-        alert(Document.referrer)
+    
 
 
         // $('#test_btn').html(JSON.stringify(Tele_web))

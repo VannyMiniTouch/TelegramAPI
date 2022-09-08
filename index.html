@@ -34,6 +34,13 @@
                         necessitatibus consequuntur repellendus repellat. Assumenda, nobis ducimus?
                     </p>
 
+                    <p id="demo"></p>
+
+                    <script>
+                    document.getElementById("demo").innerHTML = document.referrer;
+                    </script>
+
+
                     <div class="mt-2 mb-2" id="test_btn">
 
                     </div>
@@ -72,7 +79,7 @@
             alert('Back button clicked')
         })
 
-        alert(Document.referrer)
+       
         // $('#test_btn').html(Document.referrer)
 
         // $('#test_btn').html(JSON.stringify(Tele_web))
