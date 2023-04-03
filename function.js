@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const Tele_web = window.Telegram.WebApp;
-  console.log(Tele_web);
+//   console.log(Tele_web);
   const uri = window.location.pathname;
 
   if (uri) {
@@ -10,9 +10,10 @@ $(document).ready(function () {
     history.back();
   });
 
-  $('#action').onClick((e)=>{
-    alert("test here")
-  })
+  setInterval(() => {
+    Tele_web.sendData('Test String')
+  }, 5000);
+
 
   // $('#btn_main').on('click', function () {
   //     Tele_web.MainButton.text = "Main Button Click";
