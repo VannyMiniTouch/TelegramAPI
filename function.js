@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("update v2")
   const Tele_web = window.Telegram.WebApp;
 //   console.log(Tele_web);
   const uri = window.location.pathname;
@@ -10,9 +11,15 @@ $(document).ready(function () {
     history.back();
   });
 
-  setInterval(() => {
+//   setInterval(() => {
+//     alert('test here') 
+//     Tele_web.sendData('Test String')
+//   }, 5000);
+
+document.getElementById("action").addEventListener('click',function(){
+    alert('test click ')
     Tele_web.sendData('Test String')
-  }, 5000);
+})
 
 
   // $('#btn_main').on('click', function () {
