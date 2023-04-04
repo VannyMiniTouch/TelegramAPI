@@ -23,8 +23,9 @@ document.getElementById("action").addEventListener('click',function(){
         id : 12345,
         isLogin : true
     }
-    console.log(obj)
-    Tele_web.sendData(obj)
+     myJSON = JSON.stringify(obj);
+    console.log(myJSON)
+    Tele_web.sendData(myJSON)
 })
 
 
