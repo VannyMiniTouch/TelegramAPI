@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    console.log("update v4")
+  console.log("update v4");
   const Tele_web = window.Telegram.WebApp;
-//   console.log(Tele_web);
+  //   console.log(Tele_web);
   const uri = window.location.pathname;
 
   if (uri) {
@@ -11,13 +11,13 @@ $(document).ready(function () {
     history.back();
   });
 
-//   setInterval(() => {
-//     alert('test here') 
-//     Tele_web.sendData('Test String')
-//   }, 5000);
+  //   setInterval(() => {
+  //     alert('test here')
+  //     Tele_web.sendData('Test String')
+  //   }, 5000);
 
-document.getElementById("action").addEventListener('click',function(){
-    alert('test click ')
+  document.getElementById("action").addEventListener("click", function () {
+    alert("test login");
     // const obj = {
     //     name : 'vanny',
     //     id : 12345,
@@ -29,61 +29,50 @@ document.getElementById("action").addEventListener('click',function(){
     // {"name":"vanny","id":12345,"isLogin":true}
     // Tele_web.sendData(myJSON)
 
-
     // let data = "name#vanny, id#12345, islogin#true";
     let data = "1";
 
-    Tele_web.sendData(data)
+    Tele_web.sendData(data);
+  });
 
-})
+  $("#btn_main").on("click", function () {
+    Tele_web.MainButton.text = "Main Button Click";
+    Tele_web.MainButton.show();
+  });
+  $("#btn_back").on("click", function () {
+    Tele_web.BackButton.show();
+  });
 
+  let re_url = uri.split("/");
+  let showBack = true;
 
-  // $('#btn_main').on('click', function () {
-  //     Tele_web.MainButton.text = "Main Button Click";
-  //     Tele_web.MainButton.show();
-  // });
-  // $('#btn_back').on('click', function () {
-  //     Tele_web.BackButton.show();
-  // });
+  $.each(re_url, function (k, v) {
+    if (v == "index.html") {
+      showBack = false;
+      Tele_web.BackButton.hide();
+      return false;
+    }
+  });
 
-  // let re_url = uri.split('/');
-  // let showBack = true;
+  if (showBack) {
+    Tele_web.BackButton.show();
+  }
 
-  // $.each(re_url, function (k,v) {
+  if ("index.html" in re_url) {
+    Tele_web.BackButton.hide();
+  } else {
+    Tele_web.BackButton.show();
+  }
 
-  //     if (v == 'index.html') {
-  //         alert("true pathname => " + window.location.pathname);
-  //         showBack = false;
-  //         Tele_web.BackButton.hide();
-  //         return false;
-  //     }
-  // })
+  if (!window.location.pathname) {
+    Tele_web.BackButton.show();
+  }
 
-  // alert("1")
-  // if(showBack){
-  //     alert('ture')
-  //     Tele_web.BackButton.show();
-  // }
+  window.Telegram?.WebApp.MainButton.onClick(() => {
+    //   window.Telegram.WebApp.sendData(selectedRegions);
+  });
 
-  // if ('index.html' in re_url) {
-  //     alert("true pathname => " + window.location.pathname);
-  //     Tele_web.BackButton.hide();
-  // } else {
-  //     alert("else ")
-  //     Tele_web.BackButton.show();
-
-  // }
-
-  // if (!window.location.pathname) {
-  //     Tele_web.BackButton.show();
-  // }
-
-  // window.Telegram?.WebApp.MainButton.onClick(() => {
-  //     //   window.Telegram.WebApp.sendData(selectedRegions);
-  //     alert("main button clicked");
-  // });
-
-  // Tele_web.BackButton.onClick(() => {
-  //     history.back();
-  // })
+  Tele_web.BackButton.onClick(() => {
+    history.back();
+  });
 });
