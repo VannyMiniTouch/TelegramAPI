@@ -1,0 +1,9 @@
+{
+  "login": [
+    { "firstName": "John", "lastName": "Doe", "code": 1, "islogin": false }
+  ],
+  "data": [
+    { "firstName": "Anna", "lastName": "Smith" },
+    { "firstName": "Peter", "lastName": "Jones" }
+  ]
+}
