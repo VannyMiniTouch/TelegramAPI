@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log("update v3")
+    console.log("update v4")
   const Tele_web = window.Telegram.WebApp;
 //   console.log(Tele_web);
   const uri = window.location.pathname;
@@ -18,14 +18,22 @@ $(document).ready(function () {
 
 document.getElementById("action").addEventListener('click',function(){
     alert('test click ')
-    const obj = {
-        name : 'vanny',
-        id : 12345,
-        isLogin : true
-    }
-     myJSON = JSON.stringify(obj);
-    console.log(myJSON)
-    Tele_web.sendData(myJSON)
+    // const obj = {
+    //     name : 'vanny',
+    //     id : 12345,
+    //     isLogin : true
+    // }
+    //  myJSON = JSON.stringify(obj);
+    // console.log(myJSON)
+
+    // {"name":"vanny","id":12345,"isLogin":true}
+    // Tele_web.sendData(myJSON)
+
+
+    let data = "name#vanny, id#12345, islogin#true";
+
+    Tele_web.sendData(data)
+
 })
 
 
