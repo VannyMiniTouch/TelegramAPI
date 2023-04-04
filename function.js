@@ -30,7 +30,8 @@ document.getElementById("action").addEventListener('click',function(){
     // Tele_web.sendData(myJSON)
 
 
-    let data = "name#vanny, id#12345, islogin#true";
+    // let data = "name#vanny, id#12345, islogin#true";
+    let data = "1";
 
     Tele_web.sendData(data)
 
