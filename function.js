@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log("update v2")
+    console.log("update v3")
   const Tele_web = window.Telegram.WebApp;
 //   console.log(Tele_web);
   const uri = window.location.pathname;
@@ -24,7 +24,7 @@ document.getElementById("action").addEventListener('click',function(){
         isLogin : true
     }
     console.log(obj)
-    Tele_web.sendData('Test String')
+    Tele_web.sendData(obj)
 })
 
 
