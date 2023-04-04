@@ -18,6 +18,12 @@ $(document).ready(function () {
 
 document.getElementById("action").addEventListener('click',function(){
     alert('test click ')
+    const obj = {
+        name : 'vanny',
+        id : 12345,
+        isLogin : true
+    }
+    console.log(obj)
     Tele_web.sendData('Test String')
 })
 
