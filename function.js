@@ -42,25 +42,11 @@ $(document).ready(function () {
     }
   });
 
-  //   $("#btn_main").on("click", function () {
-  //     Tele_web.MainButton.text = "Main Button Click";
-  //     Tele_web.MainButton.show();
-  //   });
-  $("#btn_main").on("click", function () {
-    console.log('click to show')
-    Tele_web.MainButton.show();
+    $("#btn_main").on("click", function () {
+      Tele_web.MainButton.text = "Main Button Click";
+      Tele_web.MainButton.show();
+    });
 
-    setTimeout(() => {
-        alert(Tele_web.MainButton.isShown());
-    }, 3000);
-    // if (Tele_web.MainButton.isShown()) {
-    //   Tele_web.MainButton.text = "Main Button Hidden";
-    //   Tele_web.MainButton.hide();
-    // } else {
-    //   Tele_web.MainButton.text = "Main Button Shown";
-    //   Tele_web.MainButton.show();
-    // }
-  });
 
   $("#btn_back").on("click", function () {
     history.back();
