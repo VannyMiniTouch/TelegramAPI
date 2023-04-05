@@ -1,6 +1,8 @@
 $(document).ready(function () {
+    
   console.log("update v1");
   const Tele_web = window.Telegram.WebApp;
+  console.log(Tele_web.expand())
   //   console.log(Tele_web);
   const uri = window.location.pathname;
 
@@ -35,11 +37,11 @@ $(document).ready(function () {
   //   })
 
   $("#fullscreen").on("click", function () {
-    if (Tele_web.isExpanded()) {
-      Tele_web.collapse();
-    } else {
+    // if (Tele_web.isExpanded()) {
+    //   Tele_web.collapse();
+    // } else {
       Tele_web.expand();
-    }
+    // }
   });
 
   $("#btn_main").on("click", function () {
