@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("update v4");
+  console.log("update v0");
   const Tele_web = window.Telegram.WebApp;
   //   console.log(Tele_web);
   const uri = window.location.pathname;
@@ -7,14 +7,10 @@ $(document).ready(function () {
   if (uri) {
     Tele_web.BackButton.show();
   }
+
   Tele_web.BackButton.onClick(() => {
     history.back();
   });
-
-  //   setInterval(() => {
-  //     alert('test here')
-  //     Tele_web.sendData('Test String')
-  //   }, 5000);
 
   document.getElementById("action").addEventListener("click", function () {
     alert("test login");
@@ -34,13 +30,17 @@ $(document).ready(function () {
 
     Tele_web.sendData(data);
   });
+  $('#fullscreen').on('click', function(){
+    Tele_web.expand();
+  })
 
   $("#btn_main").on("click", function () {
     Tele_web.MainButton.text = "Main Button Click";
     Tele_web.MainButton.show();
   });
+
   $("#btn_back").on("click", function () {
-    Tele_web.BackButton.show();
+    history.back();
   });
 
   let re_url = uri.split("/");
@@ -72,7 +72,7 @@ $(document).ready(function () {
     //   window.Telegram.WebApp.sendData(selectedRegions);
   });
 
-  Tele_web.BackButton.onClick(() => {
-    history.back();
-  });
+  //   Tele_web.BackButton.onClick(() => {
+  //     history.back();
+  //   });
 });
