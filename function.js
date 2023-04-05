@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  console.log("update v0");
+  console.log("update v1");
   const Tele_web = window.Telegram.WebApp;
   //   console.log(Tele_web);
   const uri = window.location.pathname;
@@ -47,13 +47,19 @@ $(document).ready(function () {
   //     Tele_web.MainButton.show();
   //   });
   $("#btn_main").on("click", function () {
-    if (Tele_web.MainButton.isShown()) {
-      Tele_web.MainButton.text = "Main Button Hidden";
-      Tele_web.MainButton.hide();
-    } else {
-      Tele_web.MainButton.text = "Main Button Shown";
-      Tele_web.MainButton.show();
-    }
+    console.log('click to show')
+    Tele_web.MainButton.show();
+
+    setTimeout(() => {
+        alert(Tele_web.MainButton.isShown());
+    }, 3000);
+    // if (Tele_web.MainButton.isShown()) {
+    //   Tele_web.MainButton.text = "Main Button Hidden";
+    //   Tele_web.MainButton.hide();
+    // } else {
+    //   Tele_web.MainButton.text = "Main Button Shown";
+    //   Tele_web.MainButton.show();
+    // }
   });
 
   $("#btn_back").on("click", function () {
