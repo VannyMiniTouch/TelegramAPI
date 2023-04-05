@@ -42,11 +42,17 @@ $(document).ready(function () {
     }
   });
 
-    $("#btn_main").on("click", function () {
-      Tele_web.MainButton.text = "Main Button Click";
+  $("#btn_main").on("click", function () {
+    if ($(this).attr("isopen") != false) {
+      Tele_web.MainButton.text = "Hello World";
       Tele_web.MainButton.show();
-    });
-
+      $(this).attr("isopen", false);
+    }else{
+        // Tele_web.MainButton.text = "Hello World";
+        Tele_web.MainButton.hide();
+        $(this).attr("isopen", true);
+    }
+  });
 
   $("#btn_back").on("click", function () {
     history.back();
