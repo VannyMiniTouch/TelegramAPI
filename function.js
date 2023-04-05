@@ -47,10 +47,12 @@ $(document).ready(function () {
       Tele_web.MainButton.text = "Hello World";
       Tele_web.MainButton.show();
       $(this).attr("isopen", "open");
-    }else{
-        Tele_web.MainButton.text = "Hello World";
-        Tele_web.MainButton.hide();
-        $(this).attr("isopen", "close");
+      $(this).html("Close MainButton");
+    } else {
+      Tele_web.MainButton.text = "Hello World";
+      Tele_web.MainButton.hide();
+      $(this).attr("isopen", "close");
+      $(this).html("Open MainButton");
     }
   });
 
