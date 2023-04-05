@@ -30,14 +30,30 @@ $(document).ready(function () {
 
     Tele_web.sendData(data);
   });
-  $('#fullscreen').on('click', function(){
-    Tele_web.expand();
-  })
+  //   $('#fullscreen').on('click', function(){
+  //     Tele_web.expand();
+  //   })
 
+  $("#fullscreen").on("click", function () {
+    if (Tele_web.isExpanded()) {
+      Tele_web.collapse();
+    } else {
+      Tele_web.expand();
+    }
+  });
+
+  //   $("#btn_main").on("click", function () {
+  //     Tele_web.MainButton.text = "Main Button Click";
+  //     Tele_web.MainButton.show();
+  //   });
   $("#btn_main").on("click", function () {
-    Tele_web.MainButton.text = "Main Button Click";
-    // Tele_web.MainButton.show();
-    Tele_web.toggleMainButton();
+    if (Tele_web.MainButton.isShown()) {
+      Tele_web.MainButton.text = "Main Button Hidden";
+      Tele_web.MainButton.hide();
+    } else {
+      Tele_web.MainButton.text = "Main Button Shown";
+      Tele_web.MainButton.show();
+    }
   });
 
   $("#btn_back").on("click", function () {
