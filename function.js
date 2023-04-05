@@ -36,7 +36,8 @@ $(document).ready(function () {
 
   $("#btn_main").on("click", function () {
     Tele_web.MainButton.text = "Main Button Click";
-    Tele_web.MainButton.show();
+    // Tele_web.MainButton.show();
+    Tele_web.toggleMainButton();
   });
 
   $("#btn_back").on("click", function () {
