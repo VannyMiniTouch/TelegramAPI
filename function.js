@@ -43,14 +43,14 @@ $(document).ready(function () {
   });
 
   $("#btn_main").on("click", function () {
-    if ($(this).attr("isopen") != false) {
+    if ($(this).attr("isopen") != "open") {
       Tele_web.MainButton.text = "Hello World";
       Tele_web.MainButton.show();
-      $(this).attr("isopen", false);
+      $(this).attr("isopen", "open");
     }else{
-        // Tele_web.MainButton.text = "Hello World";
+        Tele_web.MainButton.text = "Hello World";
         Tele_web.MainButton.hide();
-        $(this).attr("isopen", true);
+        $(this).attr("isopen", "close");
     }
   });
 
