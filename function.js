@@ -58,8 +58,8 @@ $(document).ready(function () {
     }
   });
 
-  $("#btn_back").on("click", function () {
-    history.back();
+  $("#close_btn").on("click", function () {
+    Tele_web.close();
   });
 
   let re_url = uri.split("/");
