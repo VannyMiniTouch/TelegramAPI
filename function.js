@@ -1,8 +1,16 @@
 $(document).ready(function () {
-    
+  $("#chknumber").click(function () {
+    let number = $("#mynumber").val();
+    let smg = number <= 100 ? "Value <= 100" : "Value > 100";
+    alert( ` Value is ${number} => ${smg} `);
+  });
+
   console.log("update v1");
   const Tele_web = window.Telegram.WebApp;
-  console.log(Tele_web.expand())
+
+  console.log("expan =>", Tele_web.isExpanded);
+
+  console.log(Tele_web.expand());
   //   console.log(Tele_web);
   const uri = window.location.pathname;
 
@@ -40,7 +48,7 @@ $(document).ready(function () {
     // if (Tele_web.isExpanded()) {
     //   Tele_web.collapse();
     // } else {
-      Tele_web.expand();
+    Tele_web.expand();
     // }
   });
 
