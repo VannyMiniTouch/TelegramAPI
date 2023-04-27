@@ -1,9 +1,17 @@
 $(document).ready(function () {
   $("#chknumber").click(function () {
     let number = $("#mynumber").val();
+    if (isNaN(number)) {
+      alert("Allow Number only");
+      return;
+    }
     let smg = number <= 100 ? "Value <= 100" : "Value > 100";
-    alert( ` Value is ${number} => ${smg} `);
+    alert(` Value is ${number} => ${smg} `);
   });
+
+  $(document).on("click",'.menu',function(){
+    alert($(this).text());
+  })
 
   console.log("update v1");
   const Tele_web = window.Telegram.WebApp;

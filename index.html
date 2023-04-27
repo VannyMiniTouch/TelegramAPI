@@ -16,6 +16,11 @@
   </head>
 
   <body>
+    <style>
+      h3{
+        cursor: pointer;
+      }
+    </style>
     <div class="container">
       <div class="row justify-content-center">
         <div class="cart">
@@ -59,12 +64,15 @@
             <button class="btn btn-sm btn-warning" id="close_btn">
               Close WebApp
             </button>
+            <br/>
+            <label class="mt-3" for="">Please Input Number</label>
+            <input class=" form-control" placeholder="Enter number" style="width:200px" type="text" id="mynumber">
+            <button class="mt-2 btn btn-primary" id="chknumber">Click to check value</button>
 
-            <br/><br/>
-            <label for="">Please Input Number</label>
-            <input class="form-control" placeholder="Enter number" style="width:200px" type="text" id="mynumber">
-            <br>
-            <button class="btn btn-primary" id="chknumber">Click to check value</button>
+            <br/>
+            <h3 class="menu">Do You Love Me?</h3>
+            <h3 class="menu">Yes</h3>
+            <h3 class="menu">No</h3>
           </div>
         </div>
       </div>
