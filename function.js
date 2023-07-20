@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-  location.reload();
-
   // window.onbeforeunload = fetch(
   //   "https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!"
   // );
