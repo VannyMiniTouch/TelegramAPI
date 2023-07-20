@@ -1,9 +1,17 @@
 $(document).ready(function () {
 
+  //beforunload
   const beforeUnloadListener = (event) => {
     fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!");
   };
   window.addEventListener("beforeunload", beforeUnloadListener);
+
+  //leav page
+  const pageHideListener = (event) => {
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20Worldpagehide!");
+  };
+
+  window.addEventListener("pagehide", pageHideListener);
 
 
   $("#chknumber").click(function () {
