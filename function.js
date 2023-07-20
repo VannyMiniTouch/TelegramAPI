@@ -1,21 +1,29 @@
 $(document).ready(function () {
 
-  window.onbeforeunload = fetch(
-    "https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!"
-  );
+  // window.onbeforeunload = fetch(
+  //   "https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!"
+  // );
 
-  // //beforunload
-  // const beforeUnloadListener = (event) => {
-  //   fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!");
-  // };
-  // window.addEventListener("beforeunload", beforeUnloadListener);
+  //beforunload
+  const beforeUnloadListener = (event) => {
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
+  };
+  window.addEventListener("beforeunload", beforeUnloadListener);
 
-  // //leav page
-  // const pageHideListener = (event) => {
-  //   fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20Worldpagehide!");
-  // };
+  //leav page
+  const pageHideListener = (event) => {
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=pageHideListener!");
+  };
+  window.addEventListener("pagehide", pageHideListener);
 
-  // window.addEventListener("pagehide", pageHideListener);
+
+  document.onvisibilitychange = function() {
+    if (document.visibilityState === 'hidden') {
+      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=visibilityState!");
+    }
+  };
+
+
 
 
   $("#chknumber").click(function () {
