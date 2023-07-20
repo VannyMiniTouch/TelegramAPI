@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+  const beforeUnloadListener = (event) => {
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!");
+  };
+  window.addEventListener("beforeunload", beforeUnloadListener);
+
+
   $("#chknumber").click(function () {
     let number = $("#mynumber").val();
     if (isNaN(number)) {
@@ -9,7 +16,7 @@ $(document).ready(function () {
     alert(` Value is ${number} => ${smg} `);
   });
 
-  $(document).on("click",'.menu',function(){
+  $(document).on("click", '.menu', function () {
     alert($(this).text());
   })
 
