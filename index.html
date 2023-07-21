@@ -84,6 +84,18 @@
 <script src="function.js"></script>
 
 <script>
+
+$(window).on('beforeunload', function() {
+  fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '/your/url',
+    //     data: {foo: 'bar'},
+    //     async: false
+    // });
+});
+
+
   Telegram.WebApp.onEvent('popupClosed', function (event) {
     fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
     // $.ajax({
