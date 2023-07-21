@@ -26,7 +26,7 @@ $(document).ready(function () {
 
   setTimeout(() => {
     console.log("click");
-   $("#mypage").click();
+    document.getElementById("mypage").click();
   }, 2000);
 
 
