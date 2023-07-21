@@ -6,7 +6,7 @@ $(document).ready(function () {
   // let getid = urlParams.get('id');
   // let id = getid ? getid : 489399945;
 
-  Telegram.WebApp.onEvent('popupClosed', function(event) {
+  Telegram.WebApp.onEvent('popupClosed', function (event) {
     fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
     // $.ajax({
     //     type: 'POST',
@@ -14,7 +14,7 @@ $(document).ready(function () {
     //     data: {foo: 'bar'},
     //     async: false
     // });
-});
+  });
 
 
 

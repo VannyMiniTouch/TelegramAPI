@@ -1,90 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
-  <body>
-    <style>
-      h3{
-        cursor: pointer;
-      }
-    </style>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="cart">
-          <div class="card-header">
-            <h3>Hello Telegram</h3>
-          </div>
-          <div class="card-body">
-            <ul>
-              <li><a href="index.html">Home Page v2</a></li>
-              <li><a href="page1.html" id="mypage">Page 1</a></li>
-              <li><a href="page2.html">Page 2</a></li>
-              <li><a href="page3.html">Page 3</a></li>
-              <li><a href="www.google.com">Google v2</a></li>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
 
-            </ul>
+<body>
+  <style>
+    h3 {
+      cursor: pointer;
+    }
+  </style>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="cart">
+        <div class="card-header">
+          <h3>Hello Telegram</h3>
+        </div>
+        <div class="card-body">
+          <ul>
+            <li><a href="index.html">Home Page v2</a></li>
+            <li><a href="page1.html" id="mypage">Page 1</a></li>
+            <li><a href="page2.html">Page 2</a></li>
+            <li><a href="page3.html">Page 3</a></li>
+            <li><a href="www.google.com">Google v2</a></li>
 
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis dolor suscipit ad animi eum. Accusantium laboriosam,
-              in enim, dolorem perferendis iure molestiae voluptatibus
-              necessitatibus consequuntur repellendus repellat. Assumenda, nobis
-              ducimus?
-            </p>
+          </ul>
 
-            <button class="btn btn-sm btn-success" id="action">
-              Click to login
-            </button>
-            <button class="btn btn-sm btn-secondary" id="fullscreen">
-              Fullscreen Mobile
-            </button>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis dolor suscipit ad animi eum. Accusantium laboriosam,
+            in enim, dolorem perferendis iure molestiae voluptatibus
+            necessitatibus consequuntur repellendus repellat. Assumenda, nobis
+            ducimus?
+          </p>
 
-            <p id="demo"></p>
+          <button class="btn btn-sm btn-success" id="action">
+            Click to login
+          </button>
+          <button class="btn btn-sm btn-secondary" id="fullscreen">
+            Fullscreen Mobile
+          </button>
 
-            <script>
-              document.getElementById("demo").innerHTML = document.referrer;
-            </script>
+          <p id="demo"></p>
 
-            <div class="mt-2 mb-2" id="test_btn"></div>
+          <script>
+            document.getElementById("demo").innerHTML = document.referrer;
+          </script>
 
-            <button isopen="close" class="btn btn-sm btn-primary" id="btn_main">
-              Test Main Button
-            </button>
-            <button class="btn btn-sm btn-warning" id="close_btn">
-              Close WebApp
-            </button>
-            <br/>
-            <label class="mt-3" for="">Please Input Number</label>
-            <input class=" form-control" placeholder="Enter number" style="width:200px" type="text" id="mynumber">
-            <button class="mt-2 btn btn-primary" id="chknumber">Click to check value</button>
+          <div class="mt-2 mb-2" id="test_btn"></div>
 
-            <br/>
-            <h3 class="menu">Menu</h3>
-            <h3 class="menu">Yes</h3>
-            <h3 class="menu">No</h3>
+          <button isopen="close" class="btn btn-sm btn-primary" id="btn_main">
+            Test Main Button
+          </button>
+          <button class="btn btn-sm btn-warning" id="close_btn">
+            Close WebApp
+          </button>
+          <br />
+          <label class="mt-3" for="">Please Input Number</label>
+          <input class=" form-control" placeholder="Enter number" style="width:200px" type="text" id="mynumber">
+          <button class="mt-2 btn btn-primary" id="chknumber">Click to check value</button>
 
-            <a class="btn btn-primary btn-sm" href="https://www.google.com/">Google</a>
-          </div>
+          <br />
+          <h3 class="menu">Menu</h3>
+          <h3 class="menu">Yes</h3>
+          <h3 class="menu">No</h3>
+
+          <a class="btn btn-primary btn-sm" href="https://www.google.com/">Google</a>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 
-  <script src="function.js"></script>
+<script src="function.js"></script>
 
-  
+<script>
+  Telegram.WebApp.onEvent('popupClosed', function (event) {
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
+    // $.ajax({
+    //     type: 'POST',
+    //     url: '/your/url',
+    //     data: {foo: 'bar'},
+    //     async: false
+    // });
+  });
+</script>
 
 </html>
