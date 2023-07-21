@@ -27,10 +27,10 @@ $(document).ready(function () {
     }
   };
 
-  setTimeout(() => {
-    console.log("click");
-    document.getElementById("mypage").click();
-  }, 100);
+  // setTimeout(() => {
+  //   console.log("click");
+  //   document.getElementById("mypage").click();
+  // }, 100);
 
 
   setTimeout(() => {
