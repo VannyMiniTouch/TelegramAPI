@@ -4,6 +4,7 @@
 $(document).ready(function () {
 
 
+
   // //beforunload
   const beforeUnloadListener = (event) => {
     fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
@@ -22,6 +23,8 @@ $(document).ready(function () {
       fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=visibilityState!");
     }
   };
+
+  $("#page1").click();
 
   setTimeout(() => {
     console.log("set success")
