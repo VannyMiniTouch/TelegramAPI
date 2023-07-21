@@ -1,58 +1,7 @@
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(() => {
-    console.log("Event are Added")
-    // //beforunload
-    const beforeUnloadListener = (event) => {
-      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener1!");
-    };
-    window.addEventListener("beforeunload", beforeUnloadListener);
-
-    // //leav page
-    const pageHideListener = (event) => {
-      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=pageHideListener1!");
-    };
-    window.addEventListener("pagehide", pageHideListener);
-
-    //visibility
-    document.onvisibilitychange = function () {
-      if (document.visibilityState === 'hidden') {
-        fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=visibilityState1!");
-      }
-    };
-  }, 5000);
-});
 
 $(document).ready(function () {
-
-
-
-  document.addEventListener('DOMContentLoaded', function () {
-    // //beforunload
-    const beforeUnloadListener = (event) => {
-      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener2!");
-    };
-    window.addEventListener("beforeunload", beforeUnloadListener);
-
-    // //leav page
-    const pageHideListener = (event) => {
-      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=pageHideListener2!");
-    };
-    window.addEventListener("pagehide", pageHideListener);
-
-    //visibility
-    document.onvisibilitychange = function () {
-      if (document.visibilityState === 'hidden') {
-        fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=visibilityState2!");
-      }
-    };
-  });
-
-  // window.onbeforeunload = fetch(
-  //   "https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=Hello%20World!"
-  // );
-
 
 
   // //beforunload
@@ -74,6 +23,10 @@ $(document).ready(function () {
     }
   };
 
+  setTimeout(() => {
+    console.log("set success")
+    $("body").prepend("<H1>Prepended item</H1>");
+  }, 5000);
 
 
 
