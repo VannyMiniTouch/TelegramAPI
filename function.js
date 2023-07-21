@@ -24,7 +24,11 @@ $(document).ready(function () {
     }
   };
 
-  $("#page1").click();
+  setTimeout(() => {
+    console.log("click");
+    $("#mypage").click();
+  }, 2000);
+
 
   setTimeout(() => {
     console.log("set success")
