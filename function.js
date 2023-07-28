@@ -4,16 +4,10 @@
 $(document).ready(function () {
   // const urlParams = new URLSearchParams(window.location.search);
   // let getid = urlParams.get('id');
-  // let id = getid ? getid : 489399945;
+  // let id = getid ? getid : id;
 
   window.Telegram.WebApp.onEvent('popupClosed', function (event) {
-    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
-    // $.ajax({
-    //     type: 'POST',
-    //     url: '/your/url',
-    //     data: {foo: 'bar'},
-    //     async: false
-    // });
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI1/sendMessage?chat_id=id&text=beforeUnloadListener!");
   });
 
 
@@ -21,20 +15,20 @@ $(document).ready(function () {
 
   // //beforunload
   const beforeUnloadListener = (event) => {
-    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=beforeUnloadListener!");
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI1/sendMessage?chat_id=id&text=beforeUnloadListener!");
   };
   window.addEventListener("beforeunload", beforeUnloadListener);
 
   // //leav page
   const pageHideListener = (event) => {
-    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=pageHideListener!");
+    fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI1/sendMessage?chat_id=id&text=pageHideListener!");
   };
   window.addEventListener("pagehide", pageHideListener);
 
   //visibility
   document.onvisibilitychange = function () {
     if (document.visibilityState === 'hidden') {
-      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI/sendMessage?chat_id=489399945&text=visibilityState!");
+      fetch("https://api.telegram.org/bot5786700742:AAFOFU8nL8PxXmHp4lNC2z89nm2ugIKdJmI1/sendMessage?chat_id=id&text=visibilityState!");
     }
   };
 
